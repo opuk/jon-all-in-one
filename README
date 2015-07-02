@@ -1,7 +1,26 @@
-rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+======================
 
-yum install puppet -y
+Pre-reqs
+--------
 
-puppet module install puppetlabs-postgresql
+* Make sure your your distros base channel is enabled
+* Make sure the hostname is resolveable
+* Upload the jon zip file(s) to /tmp
+* This git repo needs to be cloned to /root for now
 
-puppet apply applyme.pp
+Tested on el7.
+
+Installation
+------------
+
+`
+# git clone <...>
+# cd jon-all-in-one
+# ./runme.sh
+
+`
+
+Troubleshooting
+---------------
+
+1. Poke hole in the firewall as needed.
