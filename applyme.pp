@@ -1,3 +1,4 @@
+##### VARIABLES
 $db_name = 'rhq'
 $db_user = 'rhqadmin'
 $db_password = 'rhqadmin'
@@ -5,6 +6,8 @@ $user = 'jon'
 $install_path = "/opt/jon"
 $jon_version = "3.3.0.GA"
 $jon_zip = "/tmp/jon-server-$jon_version.zip"
+
+##### VARIABLES END ,
 
 class { 'postgresql::server': }
 
@@ -36,4 +39,15 @@ exec { "/usr/bin/unzip $jon_zip":
   require => [ Package["unzip"], User[$user] ], 
 }
 
+file { "$install_path/jon-server-$jon_version/bin/rhq-server.properties":
+  source => "file:///root/jon-all-in-one/rhq-server.properties",
+  owner => jon,
+  group => jon,
+  require => Exec["/usr/bin/unzip $jon_zip"],
+}
 
+exec { "$install_path/jon-server-$jon_version/bin/rhqctl install --start":
+  creates => "$install_path/rhq-agent",
+  cwd => "$install_path/jon-server-$jon_version/bin",
+  require => File["$install_path/jon-server-$jon_version/bin/rhq-server.properties"]
+}
