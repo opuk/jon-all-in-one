@@ -19,3 +19,4 @@ Troubleshooting
 ---------------
 
 1. Poke hole in the firewall as needed.
+2. You may need to adjust some of the variables in the applyme.pp file.
