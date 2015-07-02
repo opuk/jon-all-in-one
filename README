@@ -1,5 +1,3 @@
-======================
-
 Pre-reqs
 --------
 
@@ -13,12 +11,9 @@ Tested on el7.
 Installation
 ------------
 
-`
 # git clone <...>
 # cd jon-all-in-one
 # ./runme.sh
-
-`
 
 Troubleshooting
 ---------------
