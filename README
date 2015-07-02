@@ -11,7 +11,7 @@ Tested on el7.
 Installation
 ------------
 
-# git clone <...>
+# git clone https://github.com/opuk/jon-all-in-one.git
 # cd jon-all-in-one
 # ./runme.sh
 
