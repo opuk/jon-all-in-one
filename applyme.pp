@@ -51,5 +51,5 @@ exec { "$install_path/jon-server-$jon_version/bin/rhqctl install --start":
   user => $user,
   creates => "$install_path/rhq-agent",
   cwd => "$install_path/jon-server-$jon_version/bin",
-  require => [ File["$install_path/jon-server-$jon_version/bin/rhq-server.properties"], Postgresql::Server::Db[$db_name] ],
+  require => [ File["$install_path/jon-server-$jon_version/bin/rhq-server.properties"], Postgresql::Server::Db[$db_name], Package["java-1.8.0-openjdk"], Package["java-1.8.0-openjdk-devel"] ],
 }
