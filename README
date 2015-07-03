@@ -5,6 +5,7 @@ Pre-reqs
 * Make sure the hostname is resolveable
 * Upload the jon zip file(s) to /tmp
 * This git repo needs to be cloned to /root for now
+* Internet access
 
 Tested on el7.
 
