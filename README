@@ -1,7 +1,7 @@
 Pre-reqs
 --------
 
-* Make sure your your distros base channel is enabled
+* Make sure your your distros base channel is enabled (rhel-7-server-rpms on RHEL7, base on CentOS7)
 * Make sure the hostname is resolveable
 * Upload the jon zip file(s) to /tmp
 * This git repo needs to be cloned to /root for now
