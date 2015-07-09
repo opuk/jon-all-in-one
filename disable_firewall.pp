@@ -1,4 +1,4 @@
 service { 'firewalld':
-  ensure  => stopped,
-  enabled => false,
+  ensure => stopped,
+  enable => false,
 }
